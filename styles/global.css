@@ -34,7 +34,8 @@ body {
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 ol[class] {
