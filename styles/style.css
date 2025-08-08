@@ -7,33 +7,42 @@ header {
   grid-template-columns: 1fr min-content 1fr;
   align-items: center;
   max-width: 1100px;
-  height: 293px;
   width: 100%;
-  margin: 0 auto;
+  margin-top: 92px;
+  margin-bottom: 96px;
 }
 
 .header__menu {
   display: flex;
-  justify-content: start;
-  margin-left: 50px;
+  justify-content: space-between;
+  margin-left: 37.5px;
 }
 
 .header__menu-item {
-  float: left;
-  margin: 0 7px;
-  font-family: 'Raleway', sans-serif;
+  padding-left: 12.5px;
+}
+
+.header__menu-item:not(:first-child)::before {
+  content: "◯";
+  font-size: 0.4em;
+  color: black;
+  margin-right: 14.5px;
 }
 
 .header__menu-list {
-  list-style: circle inside;
-  font-family: 'Raleway', sans-serif;
-  font-size: 18px;
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+  font-family: Raleway, sans-serif;
   font-weight: 400;
-  text-decoration: none;
+  font-size: 18px;
+  font-display: swap;
+  text-underline-offset: 4px;
+  list-style: none;
 }
 
 .header__menu-item_active {
-  list-style: none;
+  text-decoration: none;
 }
 
 .header__menu-link {
@@ -41,12 +50,8 @@ header {
   color: black;
 }
 
-.header_logo {
-  height: 105px;
-  width: 148px;
-}
-
 .header__adress {
+  margin-bottom: 4px;
   margin-left: 184px;
   margin-right: 50px;
   justify-self: end;
@@ -86,8 +91,8 @@ header {
 
 .aligned-text-center {
   padding-top: 20px;
-  margin-left: 373px;
-  margin-right: 388px;
+  padding-left: 25px;
+  text-align: center;
 }
 
 .aligned-text-right {
@@ -105,15 +110,35 @@ header {
 }
 
 .cover__description-text {
-  display: flex;
-  font-family: 'Raleway', sans-serif;
-  font-style: normal;
+  align-items: start;
+  width: 637px;
+  color: white;
+  font-family: Raleway, sans-serif;
   font-weight: 400;
   font-size: 22px;
+  font-style: normal;
   line-height: 28px;
+  text-align: left;
   text-transform: uppercase;
-  color: #FFFFFF;
   z-index: 2;
+  white-space: nowrap;
+}
+
+.word-spacing__text {
+  word-spacing: 22px;
+}
+
+.word-spacing__text-after {
+  word-spacing: 19px;
+}
+
+.word-spacing__text::after {
+  content: ",";
+  margin-right: 0.2em;
+  letter-spacing: 0.5em;
+}
+
+.word-spacing__text-last {
   word-spacing: 17px;
 }
 
@@ -144,8 +169,8 @@ header {
   font-size: 40px;
   font-weight: bold;
   text-transform: uppercase;
-  margin-top: 176px;
-  margin-bottom: 27px;
+  margin-top: 171px;
+  margin-bottom: 23px;
   margin-left: 40px;
 }
 
@@ -185,7 +210,7 @@ header {
 }
 
 .card_type_film {
-  background-image: url("../images/photo.png");
+  background-image: url("../images/photo.png"); 
 }
 
 .card_type_book {
@@ -291,18 +316,20 @@ footer {
 }
 
 .footer__menu-list {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Raleway, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  font-display: swap;
+  text-underline-offset: 4px;
+  list-style: none;
+  line-height: 1.3;
 }
 
-.footer-list-item {
-  all: unset;
-  width: 164px;
-  font-family: 'Raleway', sans-serif;
-  font-size: 18px;
-  color: black;
-  cursor: pointer;
-  text-decoration: underline;
-  text-underline-offset: 3px;
+.footer__menu-list a {
+  color: black !important;
 }
 
 .footer__menu-link_active {
