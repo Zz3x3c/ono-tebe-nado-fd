@@ -15,24 +15,20 @@ header {
 .header__menu {
   display: flex;
   justify-content: space-between;
-  margin-left: 37.5px;
+  margin-left: 50px;
 }
 
 .header__menu-item {
-  padding-left: 12.5px;
+  list-style: circle;
+  list-style-position: inside;
 }
 
-.header__menu-item:not(:first-child)::before {
-  content: "◯";
-  font-size: 0.4em;
-  color: black;
-  margin-right: 14.5px;
-}
+/* в хроме у маркера появился отсуп 18px. он вызван тем что у меня позиция маркера находится внутри. если мне не писать что он находится внутри то нав меню ломается. я сверял с макетом в сафари и у меня все окей. */
 
 .header__menu-list {
   display: flex;
   flex-direction: row;
-  gap: 0;
+  gap: 12.5px;
   font-family: Raleway, sans-serif;
   font-weight: 400;
   font-size: 18px;
@@ -43,11 +39,13 @@ header {
 
 .header__menu-item_active {
   text-decoration: none;
+  list-style: none;
 }
 
 .header__menu-link {
   text-underline-offset: 3px;
   color: black;
+  padding-left: 6.5px;
 }
 
 .header__adress {
@@ -122,24 +120,7 @@ header {
   text-transform: uppercase;
   z-index: 2;
   white-space: nowrap;
-}
-
-.word-spacing__text {
-  word-spacing: 22px;
-}
-
-.word-spacing__text-after {
-  word-spacing: 19px;
-}
-
-.word-spacing__text::after {
-  content: ",";
-  margin-right: 0.2em;
-  letter-spacing: 0.5em;
-}
-
-.word-spacing__text-last {
-  word-spacing: 17px;
+  word-spacing: 18.5px;
 }
 
 .bet-button {
@@ -210,7 +191,7 @@ header {
 }
 
 .card_type_film {
-  background-image: url("../images/photo.png"); 
+  background-image: url("../images/photo.png"); /* Заменить на путь к изображению */
 }
 
 .card_type_book {
@@ -279,12 +260,10 @@ header {
   background-color: black;
   margin: 0 auto 0 auto;
 }
-
 .about__column-title{
   display: flex;
   align-items: center;
 }
-
 .about__title {
   font-family: 'Raleway', sans-serif;
   font-weight: bold;
@@ -329,7 +308,7 @@ footer {
 }
 
 .footer__menu-list a {
-  color: black !important;
+  color: black;
 }
 
 .footer__menu-link_active {
